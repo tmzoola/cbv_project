@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>List of Teachers  page </h1>
+<ul>
+    {% for teacher in teacher_list  %}
+    
+    <li>
+        
+        <a href="/classroom/teacher_detail/{{teacher.id}}">{{teacher.first_name}} {{teacher.last_name}}</a>
+           
+    </li>
+    <ul>
+        <li>
+            <a href="/classroom/teacher_update/{{teacher.id}}">Update Info</a>
+        </li>
+    </ul>
+        
+ 
+    {% endfor %}
+</ul>
+
+{% endblock content %}
